@@ -1,0 +1,31 @@
+{
+  "name": "meu-projeto-cicd-aws",
+  "version": "1.0.0",
+  "description": "Projeto CI/CD na AWS com ECS",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --coverage --verbose",
+    "test:watch": "jest --watch"
+  },
+  "keywords": ["cicd", "aws", "ecs", "nodejs", "docker"],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ]
+  }
+}
