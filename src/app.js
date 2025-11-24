@@ -9,6 +9,31 @@ app.use((req, res, next) => {
   next();
 });
 
+
+
+
+
+// Novo endpoint
+app.get('/status', (req, res) => {
+  res.json({
+    status: 'running',
+    version: '1.1.0',
+    message: 'Deploy automático funcionando na AWS!',
+    timestamp: new Date().toISOString()
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
 // Rota principal
 app.get('/', (req, res) => {
   res.json({ 

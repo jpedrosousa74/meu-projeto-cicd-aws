@@ -43,3 +43,17 @@ describe('API Endpoints', () => {
     });
   });
 });
+
+
+
+
+
+
+
+describe('GET /status', () => {
+  test('should return status information', async () => {
+    const response = await request(app).get('/status');
+    expect(response.statusCode).toBe(200);
+    expect(response.body.status).toBe('running');
+  });
+});
